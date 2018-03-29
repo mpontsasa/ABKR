@@ -1,14 +1,39 @@
+import java.lang.module.InvalidModuleDescriptorException;
+
 public class Controller {
 
     private UserLayer userLayer;
-    private String activeDatabase;//what database is currently in use?
+    private SQLDatabaseStructure sqlDatabaseStructure;  //structure of active database
+    private ActiveEnviornment activeEnviornment = new ActiveEnviornment();
 
 
     public Controller() {
 
-        activeDatabase = "master";
     }
 
+    public void parseSQL(String commandSQL) throws InvalidModuleDescriptorException{
+
+        String words[] = commandSQL.split(" ");
+
+        if(words.length < 2)
+        {
+            throw new InvalidModuleDescriptorException("Too short command.");
+        }
+
+        switch(words[0])
+        {
+            case "USE":
+                if (words.length != 2){
+                    throw new InvalidModuleDescriptorException("Too much words after USE.");
+                }
+                activeEnviornment.setUpActiveEnviornment(words[2],false);
+
+                break;
+            case "CREATE":
+
+        }
+
+    }
 
     public void createDatabase(String databaseName){
 
@@ -21,7 +46,7 @@ public class Controller {
 
     public void createTable(){
 
-        TableStructure tableStructure = new TableStructure()
+        //TableStructure tableStructure = new TableStructure()
     }
 
     public void dropTable(){
