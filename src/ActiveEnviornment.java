@@ -1,3 +1,5 @@
+import com.sleepycat.je.Database;
+import com.sleepycat.je.DatabaseConfig;
 import com.sleepycat.je.Environment;
 import com.sleepycat.je.EnvironmentConfig;
 
@@ -24,5 +26,23 @@ public class ActiveEnviornment {
         EnvironmentConfig envConfig = new EnvironmentConfig();
         envConfig.setAllowCreate(allowCreate);
         enviornment = new Environment(new File(Finals.ENVIORNMENT_PATH + name), envConfig);
+    }
+
+    public  boolean isSetUp(){
+        return (enviornment == null);
+    }
+
+    public void createDB(String name)
+    {
+        Database myDatabase = null;
+        DatabaseConfig dbConfig = new DatabaseConfig();
+        dbConfig.setAllowCreate(true);
+        myDatabase = enviornment.openDatabase(null, name, dbConfig);
+        myDatabase.close();
+    }
+
+    public void deleteDB(String name)
+    {
+        enviornment.removeDatabase(null, name);
     }
 }

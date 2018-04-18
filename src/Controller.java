@@ -34,6 +34,14 @@ public class Controller {
                 else if(words[1].equalsIgnoreCase("TABLE")){
                     createTableCommand(words);
                 }
+                break;
+            case "DROP":
+                if (words[1].equalsIgnoreCase("DATABASE")){
+                    dropDatabaseCommand(words);
+                }
+                else if(words[1].equalsIgnoreCase("TABLE")){
+                    dropTableCommand(words);
+                }
 
 
         }
@@ -54,9 +62,9 @@ public class Controller {
         }
     }
 
-    public void createDatabaseCommand(String[] words)  throws Exception {
+    public void createDatabaseCommand(String[] words) throws Exception {
         if (words.length != 3){
-            throw new InvalidSQLCommandException("Too much words after USE.");
+            throw new InvalidSQLCommandException("Insuficient length.");
         }
 
         if (new File(Finals.ENVIORNMENT_PATH + words[2]).exists()) {
@@ -73,22 +81,61 @@ public class Controller {
         }catch (Exception e){
             e.printStackTrace();
         }
-
-
     }
 
-    public void createTableCommand(String[] words){
+    public void createTableCommand(String[] words)throws Exception{
 
-        //TableStructure tableStructure = new TableStructure()
+        if (!activeEnviornment.isSetUp())
+        {
+            throw new InvalidSQLCommandException("No database selected");
+        }
+
+        activeEnviornment.createDB(words[2]);
+        /// MEG KELL: szerkezet letrehozasa
     }
 
-    public void dropDatabaseCommand(){
-        //teszt komment gitnek
-        //tk2
-        //pull teszt karis
+    public void dropDatabaseCommand(String[] words)throws Exception{
+        if (words.length != 3){
+            throw new InvalidSQLCommandException("Insuficient length.");
+        }
+
+        if (!deleteDirectory(new File(Finals.ENVIORNMENT_PATH + words[2])))
+        {
+            throw new InvalidSQLCommandException("Cant delete Database(probobly dosent exist)");
+        }
+
+        activeEnviornment = null;
+
+        ///MEG KELL: szerkezet torlese
     }
 
-    public void dropTableCommand(){
+    public void dropTableCommand(String[] words)throws Exception{
+        if (words.length != 3){
+            throw new InvalidSQLCommandException("Insuficient length.");
+        }
 
+        if (!activeEnviornment.isSetUp())
+        {
+            throw new InvalidSQLCommandException("No database selected");
+        }
+
+        activeEnviornment.deleteDB(words[2]);
+    }
+
+    public static boolean deleteDirectory(File directory) {
+        if(directory.exists()){
+            File[] files = directory.listFiles();
+            if(null!=files){
+                for(int i=0; i<files.length; i++) {
+                    if(files[i].isDirectory()) {
+                        deleteDirectory(files[i]);
+                    }
+                    else {
+                        files[i].delete();
+                    }
+                }
+            }
+        }
+        return(directory.delete());
     }
 }

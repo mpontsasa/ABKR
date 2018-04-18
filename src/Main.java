@@ -6,7 +6,9 @@ public class Main {
         Controller controller = new Controller();
         try
         {
-            controller.parseSQL("CREATE DATABASE TestEnv3");
+            controller.parseSQL("use TestEnv2");
+            System.out.println("Elso command vege");
+            controller.parseSQL("Create Table Table1");
         }
         catch (InvalidSQLCommandException isqlce)
         {
