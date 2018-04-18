@@ -1,20 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="52f1235a-a43d-4d5e-8957-4c7e38cb2adc" name="Default" comment="">
+    <list default="true" id="52f1235a-a43d-4d5e-8957-4c7e38cb2adc" name="Default" comment="Create, drop">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/Enviornments/testEnv2/00000000.jdb" afterPath="$PROJECT_DIR$/Enviornments/testEnv2/00000000.jdb" />
-      <change beforePath="$PROJECT_DIR$/Enviornments/testEnv2/je.config.csv" afterPath="$PROJECT_DIR$/Enviornments/testEnv2/je.config.csv" />
-      <change beforePath="$PROJECT_DIR$/Enviornments/tesztEnviornment/00000000.jdb" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Enviornments/tesztEnviornment/je.config.csv" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Enviornments/tesztEnviornment/je.info.0" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Enviornments/tesztEnviornment/je.info.0.lck" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Enviornments/tesztEnviornment/je.lck" afterPath="" />
       <change beforePath="$PROJECT_DIR$/out/production/miniABKR/ActiveEnviornment.class" afterPath="$PROJECT_DIR$/out/production/miniABKR/ActiveEnviornment.class" />
       <change beforePath="$PROJECT_DIR$/out/production/miniABKR/Main.class" afterPath="$PROJECT_DIR$/out/production/miniABKR/Main.class" />
-      <change beforePath="$PROJECT_DIR$/src/ActiveEnviornment.java" afterPath="$PROJECT_DIR$/src/ActiveEnviornment.java" />
-      <change beforePath="$PROJECT_DIR$/src/Controller.java" afterPath="$PROJECT_DIR$/src/Controller.java" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" afterPath="$PROJECT_DIR$/src/Main.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -331,12 +321,18 @@
       <option name="project" value="LOCAL" />
       <updated>1524052099818</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Create, drop">
+      <created>1524055513102</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1524055513102</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1860" height="1098" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -344,9 +340,9 @@
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32972974" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32972974" sideWeight="0.5021716" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32972974" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32972974" sideWeight="0.49782845" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -372,7 +368,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Elso teszt" />
     <MESSAGE value="Awsome" />
-    <option name="LAST_COMMIT_MESSAGE" value="Awsome" />
+    <MESSAGE value="Create, drop" />
+    <option name="LAST_COMMIT_MESSAGE" value="Create, drop" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
