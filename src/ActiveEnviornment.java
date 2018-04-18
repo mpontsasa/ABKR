@@ -14,7 +14,7 @@ public class ActiveEnviornment {
         this.name = name;
 
         if(allowCreate){
-            File folder = new File(DBFinals.ENVIORNMENT_PATH + name);
+            File folder = new File(Finals.ENVIORNMENT_PATH + name);
 
             if (!folder.exists()) {
                 folder.mkdir();
@@ -23,6 +23,6 @@ public class ActiveEnviornment {
 
         EnvironmentConfig envConfig = new EnvironmentConfig();
         envConfig.setAllowCreate(allowCreate);
-        enviornment = new Environment(new File(DBFinals.ENVIORNMENT_PATH + name), envConfig);
+        enviornment = new Environment(new File(Finals.ENVIORNMENT_PATH + name), envConfig);
     }
 }

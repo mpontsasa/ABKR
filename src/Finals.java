@@ -20,5 +20,7 @@ public class Finals {
     public static final String JSON_DATABASE_NAME_KEY = "DATABASE";
     public static final String JSON_DATABASE_TABLES_KEY = "Tables";
 
+    public final static String ENVIORNMENT_PATH = "Enviornments/";
+
 
 }
