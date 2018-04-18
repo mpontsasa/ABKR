@@ -58,6 +58,7 @@ public class Controller {
     public void dropDatabaseCommand(){
         //teszt komment gitnek
         //tk2
+        //pull teszt karis
     }
 
     public void dropTableCommand(){
