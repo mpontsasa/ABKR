@@ -44,6 +44,11 @@ public class SQLDatabaseStructure {
     }
 
 
+    @Override
+    public String toString(){
+        return name + "Ez egy adatbazis!";
+    }
+
     public String getName() {
         return name;
     }

@@ -59,7 +59,7 @@ public class Controller {
 
             sqlDatabaseStructure = new SQLDatabaseStructure(words[1]);
             JsonIOMaster io = new JsonIOMaster(sqlDatabaseStructure);
-            //io.readDBFromFile();
+            io.readDBFromFile();
         }catch (Exception e){
             e.printStackTrace();
         }
@@ -95,6 +95,7 @@ public class Controller {
 
         activeEnviornment.createDB(words[2]);
         /// MEG KELL: szerkezet letrehozasa
+        //TableStructure tableStructure = new TableStructure()
     }
 
     public void dropDatabaseCommand(String[] words)throws Exception{
@@ -155,5 +156,9 @@ public class Controller {
             }
         }
         return(directory.delete());
+    }
+
+    public SQLDatabaseStructure getSqlDatabaseStructure() {
+        return sqlDatabaseStructure;
     }
 }
