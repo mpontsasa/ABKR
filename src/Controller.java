@@ -2,6 +2,7 @@ import java.io.File;
 import java.lang.module.InvalidModuleDescriptorException;
 import java.nio.file.Files;
 import java.nio.file.Path;
+import java.util.Arrays;
 
 public class Controller {
 
@@ -42,8 +43,10 @@ public class Controller {
                 else if(words[1].equalsIgnoreCase("TABLE")){
                     dropTableCommand(words);
                 }
-
-
+                break;
+            case "INSERT":
+                insertIntoCommand(words);
+                break;
         }
     }
 
@@ -75,9 +78,9 @@ public class Controller {
             activeEnviornment.setUpActiveEnviornment(words[2],true);
 
             //create structure!!!!!!!!!!!!!!!!++++++
-            //sqlDatabaseStructure = new SQLDatabaseStructure(words[1]);
-            //JsonIOMaster io = new JsonIOMaster(sqlDatabaseStructure);
-            //io.readDBFromFile();
+            SQLDatabaseStructure databaseStructure = new SQLDatabaseStructure(words[2]);
+            databaseStructure.toJson();
+
         }catch (Exception e){
             e.printStackTrace();
         }
@@ -120,6 +123,21 @@ public class Controller {
         }
 
         activeEnviornment.deleteDB(words[2]);
+    }
+
+    public void insertIntoCommand(String[] words)throws Exception{
+
+        if (!activeEnviornment.isSetUp())
+        {
+            throw new InvalidSQLCommandException("No database selected");
+        }
+
+        if (!words[1].equalsIgnoreCase("INTO") || !words[3].equalsIgnoreCase("VALUES"))
+        {
+            throw new InvalidSQLCommandException("Unknown command format.");
+        }
+
+        activeEnviornment.insertIntoDB(words[2], Arrays.copyOfRange(words, 4, words.length));
     }
 
     public static boolean deleteDirectory(File directory) {
