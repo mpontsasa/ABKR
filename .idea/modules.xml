@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/miniABKR.iml" filepath="$PROJECT_DIR$/miniABKR.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ABKR.iml" filepath="$PROJECT_DIR$/ABKR.iml" />
     </modules>
   </component>
 </project>
